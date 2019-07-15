@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.navbar {
+  background-color: #960090;
+}
+
+.logo {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+a:hover {
+  color: white!important;
+  text-decoration: none!important;
+}
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #960090;
+  color: white;
+  height: 4rem;
+  position: absolute;
+  right: 0;bottom:0;left:0;
+  padding-top: 1rem;
+}
+
+#card-d {
+  flex-flow: row wrap;
+  margin-right: 9.375rem;
+  margin-left: 9.375rem;
+  margin-top: 12.5rem;
+  position: absolute;
+  z-index:2;
+}
+#crd {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  background-clip: border-box;
+  border: 0.0625rem solid white;
+  border-radius: .25rem;
+}
+.card:hover{
+  transform: scale(1.1);
+  z-index: 9;
+  box-shadow: 0.4rem 0.4rem 1.4rem lightgrey;
+}
+.card{
+  transition: all 0.2s;
+
+}
+#crd {
+  opacity: 0.65;
+}
+#crd:hover {
+  opacity: 1;
+  filter: alpha(opacity=50);
+}
