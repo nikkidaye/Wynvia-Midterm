@@ -1,50 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
+/* NAV BAR */
 .navbar {
   background-color: #960090;
 }
-
-.logo {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.nav-logo {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
-
-a:hover {
-  color: white!important;
-  text-decoration: none!important;
+.idlinks {
+  font-size: 1.15rem;
 }
 a {
   text-decoration: none;
 }
-
-footer {
-  background-color: #960090;
-  color: white;
-  height: 4rem;
-  position: absolute;
-  right: 0;bottom:0;left:0;
-  padding-top: 1rem;
+a:hover {
+  color: white!important;
+  text-decoration: none!important;
 }
 
+
+/* HEADER */
+.header {
+  display: flex;
+  padding-top: 4.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+.large-logo {
+margin-bottom: 0.6rem;
+}
+h4 {
+  color: #353535;
+}
+
+
+/* BODY */
 #card-d {
   flex-flow: row wrap;
   margin-right: 9.375rem;
   margin-left: 9.375rem;
-  margin-top: 12.5rem;
+  margin-top: 3rem;
   position: absolute;
   z-index:2;
+}
+.card {
+  transition: all 0.2s;
+  border-style: none;
+}
+.card:hover {
+  transform: scale(1.075);
+  z-index: 9;
+  box-shadow: 0.4rem 0.4rem 1.4rem lightgrey;
 }
 #crd {
   display: flex;
@@ -53,20 +58,20 @@ footer {
   background-clip: border-box;
   border: 0.0625rem solid white;
   border-radius: .25rem;
-}
-.card:hover{
-  transform: scale(1.1);
-  z-index: 9;
-  box-shadow: 0.4rem 0.4rem 1.4rem lightgrey;
-}
-.card{
-  transition: all 0.2s;
-
-}
-#crd {
-  opacity: 0.65;
+  opacity: 0.75;
 }
 #crd:hover {
   opacity: 1;
   filter: alpha(opacity=50);
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #960090;
+  color: white;
+  height: 2.5rem;
+  position: absolute;
+  right: 0;bottom:0;left:0;
+  padding-top: 0.4rem;
 }
