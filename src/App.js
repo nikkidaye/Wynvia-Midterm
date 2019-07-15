@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Question from './Components/Question';
+import QuestionCount from './Components/QuestionCount';
+import Form from './Components/Form';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  getQuiz = (e) => {
+    const startQuiz = e.target.elements.startQuiz.value;
+    e.preventDefault();
+    console.log(startQuiz);
+  }
+  render() {
+    return(
+      <div>
+        <div className="header bg-primary">
+          <h1>Wynvia Tech Trivia</h1>
+        </div>
+        <div className="form-container">
+          <Form className="quiz-form" />
+          <Question />
+          <QuestionCount />
+        </div>
+        
+      </div>
+    )
+  }
 }
-
 export default App;
