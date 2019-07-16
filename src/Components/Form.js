@@ -1,7 +1,10 @@
 import React from "react";
 
 class Form extends React.Component {
+  onClick = () => {};
+
   render() {
+    console.log(this.props.question);
     return (
       <div>
         <form>
@@ -10,11 +13,11 @@ class Form extends React.Component {
             easy
           </button>
           <input type="radio" value="medium" />
-          <button onclick="" class="medium">
+          <button onClick="" class="medium">
             medium
           </button>
           <input type="radio" value="hard" />
-          <button onclick="" class="hard">
+          <button onClick={this.props.getQuestion} class="hard">
             hard
           </button>
         </form>
