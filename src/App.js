@@ -3,7 +3,13 @@ import Question from "./Components/Question";
 import QuestionCount from "./Components/QuestionCount";
 import Form from "./Components/Form";
 import axios from "axios";
-
+import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
+import Easy from "./Components/Easy";
+import Medium from "./Components/Medium";
+import Hard from "./Components/Hard";
+import Footer from "./Components/Footer";
+import styles from './index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +38,9 @@ class App extends React.Component {
           <Form className="quiz-form" getQuestion={this.getQuestion}/>
           <Question getQuestion={this.getQuestion} />
           <QuestionCount />
+          <Easy />
+          <Medium />
+          <Hard />
         </div>
       </div>
     );
