@@ -1,8 +1,8 @@
 import React from "react";
-import Question from "./Question";
-import QuestionCount from "./QuestionCount";
+import Question from "./Components/Question";
+import QuestionCount from "./Components/QuestionCount";
 import Form from "./Components/Form";
-import Result from "./Result";
+import Result from "./Components/Result";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ class App extends React.Component {
               <div className="card image" id="crd" align="center">
                 <a href="easy-trivia.html">
                   <img src="tablet.jpg" className="card-img-top" alt="Tablet User Interface" id="card-image"></img>
-                  <Link to="/question"><button onClick={this.getQuestions}>EASY!</button></Link>
+                  <Link to="/question"><button onClick={this.getQuestion}>EASY!</button></Link>
                   </a>
               </div>
 
@@ -51,7 +51,7 @@ class App extends React.Component {
                 <a href="medium-trivia.html">
                   <img src="algorithm.png" className="card-img-top" alt="Algorithm Sample"></img>
                   <h2><span><span className='spacer'></span>MEDIUM!</span></h2>
-                </a> 
+                </a>
               </div>
               {/* <!-- HARD --> */}
               <div className="card image" id="crd" align="center">
