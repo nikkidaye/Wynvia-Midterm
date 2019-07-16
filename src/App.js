@@ -9,6 +9,7 @@ import Easy from "./Components/Easy";
 import Medium from "./Components/Medium";
 import Hard from "./Components/Hard";
 import Footer from "./Components/Footer";
+import QuizOptions from './Components/QuizOptions';
 import styles from './index.css';
 
 class App extends React.Component {
