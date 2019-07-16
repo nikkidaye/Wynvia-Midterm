@@ -8,20 +8,13 @@ class Form extends React.Component {
     console.log(this.props.question);
     return (
       <div>
-        <form>
+        <form onSubmit={this.props.getQuestions}>
           <input type="radio" value="easy" />
-          <button onclick="" class="easy">
-            easy
-          </button>
+      
           <input type="radio" value="medium" />
-          <button onClick="" class="medium">
-            medium
-          </button>
+          
           <input type="radio" value="hard" />
-          <button onClick={this.props.getQuestion} class="hard">
-
-            hard
-          </button>
+         
         </form>
       </div>
     );
