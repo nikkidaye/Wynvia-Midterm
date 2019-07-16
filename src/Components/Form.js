@@ -1,6 +1,7 @@
 import React from "react";
 
 class Form extends React.Component {
+
   onClick = () => {};
 
   render() {
@@ -18,6 +19,7 @@ class Form extends React.Component {
           </button>
           <input type="radio" value="hard" />
           <button onClick={this.props.getQuestion} class="hard">
+
             hard
           </button>
         </form>
