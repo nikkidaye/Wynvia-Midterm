@@ -35,14 +35,21 @@ class App extends React.Component {
         <div className="card-deck" id="card-d">
           {/* <!-- EASY --> */}
           <div className="card image" id="crd" align="center">
-            <img
-              src="tablet.jpg"
-              className="card-img-top"
-              alt="Tablet User Interface"
-              id="card-image"
-            />
-
-            <button onClick={this.getQuestion}>
+            <a href="/easy">
+              <img
+                src="tablet.jpg"
+                className="card-img-top"
+                alt="Tablet User Interface"
+                id="card-image"
+              />
+              <h2>
+                <span>
+                  <span className="spacer" />
+                  EASY!
+                </span>
+              </h2>
+            </a>
+            {/* <button onClick={this.getQuestion}>
               <Link
                 to={{
                   pathname: "/easy"
@@ -50,12 +57,13 @@ class App extends React.Component {
               >
                 EASY!
               </Link>
-            </button>
+            </button> */}
           </div>
 
           {/* <!-- MEDIUM --> */}
+
           <div className="card image" id="crd" align="center">
-            <a href="medium-trivia.html">
+            <a href="/medium">
               <img
                 src="algorithm.png"
                 className="card-img-top"
@@ -69,9 +77,10 @@ class App extends React.Component {
               </h2>
             </a>
           </div>
+
           {/* <!-- HARD --> */}
           <div className="card image" id="crd" align="center">
-            <a href="hard-trivia.html">
+            <a href="./hard">
               <img
                 src="cpp.png"
                 className="card-img-top"
@@ -86,6 +95,7 @@ class App extends React.Component {
             </a>
           </div>
         </div>
+
         <footer align="center">
           <div id="end">
             <p>© 2019 wynVIA</p>
