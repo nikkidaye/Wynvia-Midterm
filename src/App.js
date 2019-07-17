@@ -4,14 +4,12 @@ import QuestionCount from "./Components/QuestionCount";
 import Form from "./Components/Form";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import './index.css'
+import Easy from "./Components/Easy";
+import "./index.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      questions: []
-    };
   }
 
   getQuestion = e => {
@@ -36,19 +34,8 @@ class App extends React.Component {
         {/* <!-- CARD DECK --> */}
         <div className="card-deck" id="card-d">
           {/* <!-- EASY --> */}
-          <div className="card image" id="crd" align="center">
-            <a href="easy-trivia.html">
-              <img
-                src="tablet.jpg"
-                className="card-img-top"
-                alt="Tablet User Interface"
-                id="card-image"
-              />
-              <Link to="/question">
-                <button onClick={this.getQuestions}>EASY!</button>
-              </Link>
-            </a>
-          </div>
+
+          <Easy />
 
           {/* <!-- MEDIUM --> */}
           <div className="card image" id="crd" align="center">
@@ -90,8 +77,8 @@ class App extends React.Component {
         </footer>
         <div className="form-container">
           <Form className="quiz-form" getQuestion={this.props.getQuestion} />
-          <Question question={this.state.questions} />
-          <QuestionCount questionCount={this.state.questionitems} />
+          <Question />
+          <QuestionCount />
           {/* <a href={ this.props.correctanswers } onClick={handleClick}">Show Answer</a> */}
         </div>
       </div>

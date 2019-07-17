@@ -1,7 +1,8 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import App from '../App';
-import Question from './Question';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import App from "../App";
+import Question from "./Question";
+import Easy from "./Easy";
 
 class Router extends React.Component {
   render() {
@@ -10,9 +11,10 @@ class Router extends React.Component {
         <Switch>
           <Route path="/" component={App} exact />
           <Route path="/question" component={Question} />
+          <Route path="/easy" component={Easy} />
         </Switch>
       </BrowserRouter>
-    )
+    );
   }
 }
 
