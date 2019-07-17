@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 // import Question from "./Question";
+import '../index.css';
 
 class Easy extends React.Component {
   state = {
@@ -38,4 +39,5 @@ class Easy extends React.Component {
     );
   }
 }
+
 export default Easy;

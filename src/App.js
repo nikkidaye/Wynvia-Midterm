@@ -6,6 +6,14 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Easy from "./Components/Easy";
 import "./index.css";
+import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
+import Medium from "./Components/Medium";
+import Hard from "./Components/Hard";
+
+import QuizOptions from './Components/QuizOptions';
+import styles from './index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -79,7 +87,10 @@ class App extends React.Component {
           <Form className="quiz-form" getQuestion={this.props.getQuestion} />
           <Question />
           <QuestionCount />
-          {/* <a href={ this.props.correctanswers } onClick={handleClick}">Show Answer</a> */}
+          <Easy />
+          <Medium />
+          <Hard />
+//       {<a href={ this.props.correctanswers } onClick={handleClick}">Show Answer</a>}
         </div>
       </div>
     );
