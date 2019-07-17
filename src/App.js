@@ -1,23 +1,14 @@
 import React from "react";
-import Question from "./Components/Question";
-import QuestionCount from "./Components/QuestionCount";
-import Form from "./Components/Form";
+import Footer from "./Components/Footer";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Easy from "./Components/Easy";
-import "./index.css";
-import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import Header from "./Components/Header";
-import Medium from "./Components/Medium";
-import Hard from "./Components/Hard";
-
-import QuizOptions from './Components/QuizOptions';
-import styles from './index.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      questions: []
+    };
   }
 
   getQuestion = e => {
@@ -26,6 +17,7 @@ class App extends React.Component {
       "https://opentdb.com/api.php?amount=11&category=18&difficulty=easy";
     axios.get(questionUrl).then(res => {
       this.setState({ questions: res.data.results });
+      // console.log(res.data.results);
     });
   };
 
@@ -42,8 +34,24 @@ class App extends React.Component {
         {/* <!-- CARD DECK --> */}
         <div className="card-deck" id="card-d">
           {/* <!-- EASY --> */}
+          <div className="card image" id="crd" align="center">
+            <img
+              src="tablet.jpg"
+              className="card-img-top"
+              alt="Tablet User Interface"
+              id="card-image"
+            />
 
-          <Easy />
+            <button onClick={this.getQuestion}>
+              <Link
+                to={{
+                  pathname: "/easy"
+                }}
+              >
+                EASY!
+              </Link>
+            </button>
+          </div>
 
           {/* <!-- MEDIUM --> */}
           <div className="card image" id="crd" align="center">
@@ -83,15 +91,6 @@ class App extends React.Component {
             <p>© 2019 wynVIA</p>
           </div>
         </footer>
-        <div className="form-container">
-          <Form className="quiz-form" getQuestion={this.props.getQuestion} />
-          <Question />
-          <QuestionCount />
-          <Easy />
-          <Medium />
-          <Hard />
-//       {<a href={ this.props.correctanswers } onClick={handleClick}">Show Answer</a>}
-        </div>
       </div>
     );
   }

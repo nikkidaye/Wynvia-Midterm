@@ -1,17 +1,17 @@
 import React from "react";
-import '../index.css';
+import "../index.css";
 
 class Footer extends React.Component {
   render() {
-    <div>
-
-      <footer align="center">
-        <div>
-          <p>© 2019 wynVIA</p>
-        </div>
-      </footer>
-
-    </div>;
+    return (
+      <div>
+        <footer align="center">
+          <div>
+            <p>© 2019 wynVIA</p>
+          </div>
+        </footer>
+      </div>
+    );
   }
 }
 
