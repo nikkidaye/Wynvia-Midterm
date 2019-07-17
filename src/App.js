@@ -1,8 +1,6 @@
 import React from "react";
 import Question from "./Components/Question";
 import QuestionCount from "./Components/QuestionCount";
-import Form from "./Components/Form";
-import Result from "./Components/Result";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -15,13 +13,13 @@ class App extends React.Component {
     };
   }
 
-
   getQuestion = e => {
     e.preventDefault();
     const questionUrl = "https://opentdb.com/api.php?amount=11&category=18&difficulty=easy";
     axios.get(questionUrl)
     .then(res => {
         this.setState({questions: res.data.results});
+        // console.log(res.data.results);
       })
   };
 
@@ -40,10 +38,16 @@ class App extends React.Component {
 
               {/* <!-- EASY --> */}
               <div className="card image" id="crd" align="center">
-                <a href="easy-trivia.html">
                   <img src="tablet.jpg" className="card-img-top" alt="Tablet User Interface" id="card-image"></img>
-                  <Link to="/question"><button onClick={this.getQuestion}>EASY!</button></Link>
-                  </a>
+
+                  <button onClick={this.getQuestion}>
+                    <Link to={{
+                    pathname: '/question',
+                    state: {questions: "These are my questions"}
+                    }}>
+                    EASY!
+                  </Link>
+                  </button>
               </div>
 
               {/* <!-- MEDIUM --> */}
@@ -66,12 +70,6 @@ class App extends React.Component {
                 <p>© 2019 wynVIA</p>
               </div>
             </footer>
-                <div className="form-container">
-                  <Form className="quiz-form" getQuestion={this.props.getQuestion} />
-                  <Question question={ this.state.questions } />
-                  <QuestionCount questionCount={this.state.questionitems} />
-                  {/* <a href={ this.props.correctanswers } onClick={handleClick}">Show Answer</a> */}
-                </div>
           </div>
 
             );
