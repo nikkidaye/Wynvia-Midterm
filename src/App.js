@@ -4,6 +4,7 @@ import QuestionCount from "./Components/QuestionCount";
 import Form from "./Components/Form";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import './index.css'
 
 class App extends React.Component {
   constructor(props) {
