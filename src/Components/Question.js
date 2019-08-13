@@ -17,7 +17,7 @@ class Question extends React.Component {
 
   render() {
     return this.state.questions.map((question, index) => {
-      return <p key={index}>{question.question}</p>;
+      return <h4 className="easyq" key={index}>{question.question}</h4>;
     });
   }
 }

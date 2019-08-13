@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import '../index.css'
 
 class Easy extends React.Component {
   state = {
@@ -17,7 +18,7 @@ class Easy extends React.Component {
 
   render() {
     return this.state.questions.map((question, index) => {
-      return <p key={index}>{question.question}</p>;
+      return <h1 className="ques" key={index}>{question.question}</h1>;
     });
   }
 }

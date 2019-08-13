@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import "../index.css";
 
 class Medium extends React.Component {
   state = {
@@ -17,7 +18,7 @@ class Medium extends React.Component {
 
   render() {
     return this.state.questions.map((question, index) => {
-      return <p key={index}>{question.question}</p>;
+      return <h4 className="easyq" key={index}>{question.question}</h4>;
     });
   }
 }

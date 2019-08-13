@@ -110,6 +110,12 @@ h2 span.spacer {
    padding:0 5px;
 }
 
+.easyq {
+  justify-content: center;
+  margin: 25%;
+  color: grey;
+}
+
 /* FOOTER */
 footer {
   background-color: #960090;
